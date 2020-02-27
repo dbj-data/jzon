@@ -1,6 +1,7 @@
 // (c) 2019 by dbj.org -- CC BY-SA 4.0 -- https://creativecommons.org/licenses/by-sa/4.0/ 
 
 // #define TESTING_DBJ_RETVALS
+#include <vld.h>
 #include "common.h"
 
 /// #include "jzon_udl.h"
@@ -59,12 +60,7 @@ int main(int argc, const char* argv[], const char* envp[])
 #endif // DBJ_REDIRECT_STD_OUT
 
 	auto main_worker = [&]() {
-		try {
 			dbj_program_start(argc, argv, envp);
-		}
-		catch (...) {
-			DBJ_PRINT(DBJ_FG_RED_BOLD "\n\n" __FILE__ "\n\nUnknown exception!\n\n" DBJ_RESET);
-		}
 	};
 
 	(void)std::async(std::launch::async, [&] {

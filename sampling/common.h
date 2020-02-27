@@ -20,7 +20,7 @@
 
 // use it as a submodule
 // #include "../dbj--nanolib/dbj++valstat.h"
-#include <dbj++tu.h>
+#include "../sampling/nanolib/dbj++tu.h"
 
 #include "../jzon.h"
 #include "../jzon_utils.h"
