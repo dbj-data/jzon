@@ -17,10 +17,7 @@
 #include <crtdbg.h>
 #include <string_view>
 
-
-// use it as a submodule
-// #include "../dbj--nanolib/dbj++valstat.h"
-#include "../sampling/nanolib/dbj++tu.h"
+#include "nanolib/dbj++tu.h"
 
 #include "../jzon.h"
 #include "../jzon_utils.h"
