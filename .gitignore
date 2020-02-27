@@ -1,0 +1,11 @@
+Debug
+Release
+x64
+.vs
+.git
+*.filters
+*.user
+*.ilk
+*.pdb
+*.exe
+*.obj
