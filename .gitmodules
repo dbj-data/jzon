@@ -1,0 +1,3 @@
+[submodule "sampling/nanolib"]
+	path = sampling/nanolib
+	url = https://github.com/dbj-systems/dbj--nanolib.git
