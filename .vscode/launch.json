@@ -5,12 +5,13 @@
             "name": "DBG Launch",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/nanoplay_dbg.exe",
+            "program": "${workspaceFolder}\\sampling\\jzon_dbg.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}\\sampling",
             "environment": [],
-            "externalConsole": true
+            "externalConsole": true,
+            "preLaunchTask": "debug_build"
         }
     ]
 }

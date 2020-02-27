@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../common.h"
+#include "common.h"
 
 #define _USE_MATH_DEFINES // for MSVC
 #include <math.h>

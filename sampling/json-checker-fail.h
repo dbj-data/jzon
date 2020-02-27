@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../common.h"
+#include "common.h"
 
 #if DBJ_HAS_CXX20 == 0
 // forget it for C++20

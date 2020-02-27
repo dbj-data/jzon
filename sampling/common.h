@@ -12,29 +12,18 @@
 #define _ITERATOR_DEBUG_LEVEL  0
 #endif
 
-/*
-Why was this used?
-#if (WINVER < NTDDI_WIN10_RS3)
-#else
-#error dbj++ requires Windows builds above REDSTONE 3 or above
-#endif
-*/
-
-
 #include <future>
 #include <iomanip>
+#include <crtdbg.h>
+#include <string_view>
 
-#if 0
-// iuse it as local, for when developing
-#include "../dbj--nanolib/dbj++valstat.h"
-#include "../dbj--nanolib/dbj++tu.h"
-#else
+
 // use it as a submodule
-#include "dbj--nanolib/dbj++valstat.h"
-#include "dbj--nanolib/jzon/jzon.h"
-#include "dbj--nanolib/jzon/jzon_utils.h"
-#include "dbj--nanolib/dbj++tu.h"
-#endif
+// #include "../dbj--nanolib/dbj++valstat.h"
+#include <dbj++tu.h>
+
+#include "../jzon.h"
+#include "../jzon_utils.h"
 
 /*
 rudimentary runtime version checks

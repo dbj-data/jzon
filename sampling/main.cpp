@@ -1,35 +1,15 @@
 // (c) 2019 by dbj.org -- CC BY-SA 4.0 -- https://creativecommons.org/licenses/by-sa/4.0/ 
 
 // #define TESTING_DBJ_RETVALS
-#include <crtdbg.h>
-
 #include "common.h"
-#include "sampling/keep_it_sorted.h"
-/// #include "jzon_sampling/jzon_udl.h"
-#include "jzon_sampling/tests.h"
-#include "jzon_sampling/test-boxing.h"
-#include "jzon_sampling/json-checker-fail.h"
-#include "jzon_sampling/conformance-string.h"
-#include "jzon_sampling/conformance-double.h"
-#if 0
-#include "sampling/any_opty.h"
-#include "lambdatix/narf_again.h"
-#include "utf8/utf8_kilim.h"
-#include "sampling/cpp20.h"
-#include "lambdatix/lambda_mx_makers.h"
-#include "sampling/dbj_meta_converter.h"
-#include "valstat_research/fibo.h"
-#include "valstat_research/polygon.h"
-#include "valstat_research/valstat_dbj_samples.h"
-#include "valstat_research/valstat_dbj_async.h"
-#include "valstat_research/valstat_dbj_own.h"
-#include "utf8_decoder/utf8_decoder_sampler.h"
-#include "sampling/testing_dbj_vector.h"
-#include "sampling/no_macros_valstat.h"
-#include "sampling/fmt.h"
-#include "sampling/win/logfile.h"
-#include "sampling/find_wovels.h"
-#endif
+
+/// #include "jzon_udl.h"
+#include "tests.h"
+#include "test-boxing.h"
+#include "json-checker-fail.h"
+#include "conformance-string.h"
+#include "conformance-double.h"
+
 
 #pragma warning( push )
 #pragma warning( disable: 4100 )
@@ -43,8 +23,7 @@ static void dbj_program_start(
 	const	char * envp[]
 )
 {
-	DBJ_PRINT("dbj++nanolib version: %s" , dbj::nanolib::VERSION  );
-	DBJ_PRINT(DBJ_FG_CYAN  "dbj++nanolib playground version:[" __TIMESTAMP__ "]");
+	DBJ_PRINT(DBJ_FG_CYAN "dbj++nanolib version: %s" , dbj::nanolib::VERSION  );
 	// call the test units registered, in random order
 	// in this scenario easiest is to place the break point 
 	// in the test unit of interest

@@ -1,8 +1,7 @@
 #pragma once
 
-#include "../common.h"
+#include "common.h"
 #include "../valstat_research/valstat_dbj_status.h"
-#include <string_view>
 
 // u8 aka UTF-8, it is a mess in C++20
 // u is char16_t aka UTF-16 .. a Windows mess

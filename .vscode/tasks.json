@@ -2,17 +2,27 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "msvc debug build",
+            "label": "echo ${workspaceFolder}",
+            "type": "shell",
+            "command": "echo ${workspaceFolder}",
+            "problemMatcher": []
+        },
+        {
+            "label": "debug_build",
             "type": "shell",
             "command": "cl.exe",
             "args": [
                 "/std:c++17",
                 "/MDd",
                 "-D_HAS_EXCEPTIONS=0",
+                "/I",
+                "C:\\Program Files (x86)\\Visual Leak Detector\\include",
+                "/I",
+                "${workspaceFolder}\\sampling",
                 "/Zi",
                 "/Fe:",
-                "nanoplay_dbg.exe",
-                "main.cpp",
+                "${workspaceFolder}\\sampling\\jzon_dbg.exe",
+                "${workspaceFolder}\\sampling\\main.cpp",
                 "/link",
                 "/LIBPATH:C:\\Program Files (x86)\\Visual Leak Detector\\lib\\Win64"
             ],
@@ -33,9 +43,11 @@
                 "/std:c++17",
                 "/MDd",
                 "-D_HAS_EXCEPTIONS=0",
+                "/I",
+                "C:\\Program Files (x86)\\Visual Leak Detector\\include",
                 "/Fe:",
-                "nanoplay.exe",
-                "main.cpp"
+                "${workspaceFolder}\\sampling\\jzon.exe",
+                "${workspaceFolder}\\sampling\\main.cpp"
             ],
             "group": {
                 "kind": "build",
